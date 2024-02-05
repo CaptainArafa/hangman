@@ -1,0 +1,48 @@
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.Container{
+  background-color: rgb(170, 165, 165);
+  width: 50vw;
+  margin: 0 auto;
+  height: 90vh;
+}
+.wordContainer{
+  display: flex;
+  font-size: 8vh;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: black;
+  gap: 1.5rem;
+  
+}
+.letter{
+  border-bottom: 0.1em solid black;
+}
+.keyboardContainer{
+  display: grid;
+  font-size: 2rem;
+  font-weight: bold;
+  color: black;
+  margin-top: 2rem;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit,minmax(75px,1fr));
+}
+.keyboardKey{
+  background: none;
+  border: 5px solid black;
+  padding: 0 1.5rem;
+  color: black;
+}
+.keyboardKey.active{
+  opacity: 0.4;
+  background-color: aliceblue;
+}
+.keyboardKey:hover:not(:disabled),.keyboardKey:focus:not(:disabled){
+  background-color: goldenrod;
+  color: black;
+  border-color: black;
+  cursor: pointer;
+}
